@@ -1,0 +1,21 @@
+<div class="characters">
+    <div class="character" *ngFor="let char of characters">
+      <div class="character-name">
+        {{char.guessed? char.value : ''}}
+      </div>
+    </div>
+</div>
+<div class="keyboard">
+    <div class="keys">
+        <div
+        (click)="onKeyClick(key)"
+        class="key btn"
+        *ngFor="let key of keys"
+        [class.btn--disabled]="key.guessed || isOver">
+            <div>
+                {{key.value}}
+            </div>
+        </div>
+    </div>
+</div>
+<h3>You have {{ lives }} lives</h3>

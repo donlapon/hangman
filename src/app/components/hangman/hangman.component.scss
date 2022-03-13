@@ -1,0 +1,52 @@
+.keyboard {
+    max-width: 600px;
+    margin: 30px auto;
+    .keys {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+}
+
+.btn {
+    border-radius: 4px;
+    min-width: 36px;
+    min-height: 36px;
+    background-color: #def7c6;
+    color: #383333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      &:not(.btn--disabled) {
+        opacity: 0.7;
+      }
+    }
+    &--disabled {
+      background-color: #dcdcdc;
+      color: #ffffff;
+      cursor: default;
+    }
+  }
+
+h3 {
+    text-align: center;
+}
+
+.characters {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: fit-content;
+  
+    .character {
+      padding-bottom: 8px;
+      border-bottom: 1px solid black;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+    }
+  }
